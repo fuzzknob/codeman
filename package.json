@@ -17,6 +17,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@fortawesome/vue-fontawesome": "^3.0.0-1",
     "core-js": "^3.6.5",
+    "uid-safe": "^2.1.5",
     "vue": "^3.0.0-0"
   },
   "devDependencies": {
