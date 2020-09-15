@@ -49,7 +49,7 @@ export default {
       console.log(project)
     },
     async openFolder() {
-      
+
     },
   },
 }
