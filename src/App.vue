@@ -1,4 +1,17 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <h1>Welcome to Your Vue.js App</h1>
+  <div class="bg-black h-screen">
+    <Main />
+  </div>
 </template>
+
+<script>
+import Main from './Main'
+
+export default {
+  name: 'App',
+  components: {
+    Main,
+  },
+}
+</script>
+
