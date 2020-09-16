@@ -44,8 +44,8 @@ export default {
       projects: [],
     }
   },
-  created() {
-    this.projects = getProjectList()
+  async created() {
+    this.projects = await getProjectList()
   },
   methods: {
     addProject(project) {
