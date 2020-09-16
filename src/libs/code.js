@@ -1,6 +1,7 @@
 import { exec } from 'child_process'
-import electron from 'electron'
 import { generateUid } from '../libs/utils'
+import { capitalize } from 'lodash'
+import electron from 'electron'
 
 export function openCode(directoryPath) {
   return new Promise((res, rej) => {
@@ -16,7 +17,8 @@ export function openCode(directoryPath) {
 
 function getProjectName(directoryPath) {
   const splitted = directoryPath.split('/')
-  return splitted[splitted.length - 1].toUpperCase()
+  const projectName = splitted[splitted.length - 1]
+  return projectName.split(/[-|_]/gm).map(node => capitalize(node)).join(' ')
 }
 
 export async function openProjectDirectory() {
