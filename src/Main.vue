@@ -10,7 +10,7 @@
         <Project
           v-for="project in projects"
           :key="project.id"
-          class="mb-2"
+          class="mb-3"
           :project="project"
           @open="openProject"
           @remove="removeProject"
@@ -68,6 +68,11 @@ export default {
     async openFolder() {
       const project = await openProjectDirectory()
       if (!project) return
+      const existingProject = this.projects.find(target => target.path === project.path)
+      if (existingProject) {
+        this.openProject(existingProject)
+        return
+      }
       this.addProject(project)
       this.openProject(project)
     },

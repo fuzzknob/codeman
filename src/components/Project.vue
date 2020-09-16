@@ -4,7 +4,7 @@
     @click="openProject"
   >
     <div class="flex-1">
-      <h3 class="-mb-1 text-gray-300 text-sm">
+      <h3 class="text-gray-300 text-sm">
         {{ project.name }}
       </h3>
       <p class="text-sm text-gray-600">
