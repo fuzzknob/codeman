@@ -5,7 +5,7 @@ import electron from 'electron'
 
 export function openCode(directoryPath) {
   return new Promise((res, rej) => {
-    exec(`code ${directoryPath}`, (error) => {
+    exec(`/usr/local/bin/code ${directoryPath}`, (error) => {
       if (error) {
         rej(error)
         return

@@ -3,7 +3,13 @@ import path from 'path'
 import os from 'os'
 
 function getConfigDirPath() {
-  return path.join(os.homedir(), '.config/codeman/User')
+  let configPath = ''
+  if (process.platform === 'darwin') {
+    configPath = 'Library/Application Support/codeman/User'
+  } else if (process.platform === 'linux') {
+    configPath = '.config/codeman/User'
+  }
+  return path.join(os.homedir(), configPath)
 }
 
 export function writeFile(data) {

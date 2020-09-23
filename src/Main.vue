@@ -27,8 +27,8 @@
 </template>
 
 <script>
-import Button from './components/Button'
-import Project from './components/Project'
+import Button from './components/Button.vue'
+import Project from './components/Project.vue'
 import { openCode, openProjectDirectory } from './libs/code'
 import { setProjectList, getProjectList } from './services/projects'
 
