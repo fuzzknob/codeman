@@ -29,7 +29,7 @@
 <script>
 import Button from './components/Button.vue'
 import Project from './components/Project.vue'
-import { openCode, openProjectDirectory } from './libs/code'
+import { openCode, openProjectDirectory, closeWindow } from './libs/code'
 import { setProjectList, getProjectList } from './services/projects'
 
 export default {
@@ -56,9 +56,12 @@ export default {
       this.projects = this.projects.filter((project) => project.id !== targetProject.id)
       setProjectList(this.projects)
     },
-    async openProject(project) {
+    async openProject(data) {
       try {
-        await openCode(project.path)
+        await openCode(data.project.path)
+        if (data.closeWindow) {
+          closeWindow()
+        }
       } catch(e) {
         console.log(e)
       } finally {

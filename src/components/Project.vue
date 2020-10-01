@@ -1,7 +1,8 @@
 <template>
   <div
     class="project flex bg-gray-900 hover:bg-gray-800 rounded px-4 py-2 items-center cursor-pointer select-none"
-    @click="openProject"
+    @click.exact="openProject(false)"
+    @click.shift="openProject(true)"
   >
     <div class="flex-1">
       <h3 class="text-gray-300 text-sm">
@@ -35,8 +36,11 @@ export default {
     },
   },
   methods: {
-    openProject() {
-      this.$emit('open', this.project)
+    openProject(closeWindow = false) {
+      this.$emit('open', {
+        closeWindow,
+        project: this.project,
+      })
     },
     removeProject() {
       this.$emit('remove', this.project)

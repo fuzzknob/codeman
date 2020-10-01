@@ -34,3 +34,8 @@ export async function openProjectDirectory() {
     path: directoryPath,
   }
 }
+
+export function closeWindow() {
+  const { app } = electron.remote
+  app.quit()
+}
