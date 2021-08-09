@@ -1,11 +1,11 @@
 <template>
   <div
-    class="project flex bg-gray-900 hover:bg-gray-800 rounded px-4 py-2 items-center cursor-pointer select-none"
+    class="project flex bg-gray-200 hover:bg-gray-300 dark:bg-gray-900 dark:hover:bg-gray-800 rounded px-4 py-2 items-center cursor-pointer select-none"
     @click.exact="openProject(false)"
     @click.shift="openProject(true)"
   >
     <div class="flex-1">
-      <h3 class="text-gray-300 text-sm">
+      <h3 class="text-black dark:text-gray-300 text-sm">
         {{ project.name }}
       </h3>
       <p class="text-sm text-gray-600">

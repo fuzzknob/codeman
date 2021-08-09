@@ -1,6 +1,6 @@
 <template>
   <button
-    class="rounded px-3 py-2 bg-gray-700 hover:bg-gray-600 text-xs text-white leading-tight outline-none border-0"
+    class="bg-gray-200 hover:bg-gray-300 text-black rounded px-3 py-2 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-white text-xs leading-tight outline-none border-0"
     @click.prevent="handleClick"
   >
     <slot />

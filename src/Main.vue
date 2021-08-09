@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-black text-white">
+  <div class="dark:bg-black text-white">
     <div class="p-6">
       <Button @click="openFolder">
         <Icon icon="folder-open" />
