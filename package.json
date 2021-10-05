@@ -1,62 +1,54 @@
 {
   "name": "codeman",
-  "version": "0.1.0",
-  "private": true,
+  "productName": "Codeman",
+  "author": "fuzzknob",
+  "version": "2.0.0",
+  "description": "Codeman (Visual Studio Code Project Manger)",
+  "license": "MIT",
   "scripts": {
-    "serve": "yarn electron:serve",
-    "build": "yarn electron:generate-icons && yarn electron:build",
-    "lint": "vue-cli-service lint",
-    "electron:build": "vue-cli-service electron:build",
-    "electron:generate-icons": "electron-icon-builder --input=./public/icon.png --output=build --flatten",
-    "electron:serve": "vue-cli-service electron:serve",
-    "postinstall": "electron-builder install-app-deps",
-    "postuninstall": "electron-builder install-app-deps"
+    "start": "concurrently \"yarn:start:renderer\" \"yarn:start:electron\" --kill-others",
+    "start:renderer": "cross-env TS_NODE_TRANSPILE_ONLY=true webpack serve",
+    "start:electron": "cross-env NODE_ENV=development electron -r ts-node/register/transpile-only ./src/main/main.ts",
+    "lint": "cross-env NODE_ENV=development eslint . --fix --cache --ext .js,.jsx,.ts,.tsx"
   },
-  "main": "background.js",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.30",
-    "@fortawesome/free-solid-svg-icons": "^5.14.0",
-    "@fortawesome/vue-fontawesome": "^3.0.0-1",
-    "@tailwindcss/postcss7-compat": "^2.2.7",
-    "autoprefixer": "^9",
-    "core-js": "^3.6.5",
-    "lodash": "^4.17.20",
-    "postcss": "^7",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
-    "uid-safe": "^2.1.5",
-    "vue": "^3.0.0-0"
+    "electron": "^15.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.161",
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/compiler-sfc": "^3.0.0-0",
-    "babel-eslint": "^10.1.0",
-    "electron": "^9.0.0",
-    "electron-devtools-installer": "^3.1.0",
-    "electron-icon-builder": "^1.0.2",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0-0",
-    "vue-cli-plugin-electron-builder": "~2.0.0-rc.4",
-    "vue-cli-plugin-tailwind": "~2.0.6"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/recommended",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.1",
+    "@types/node": "^16.10.2",
+    "@types/react": "^17.0.27",
+    "@types/react-dom": "^17.0.9",
+    "@types/webpack": "^5.28.0",
+    "@types/webpack-dev-server": "^4.3.0",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "autoprefixer": "^10.3.7",
+    "concurrently": "^6.3.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.3.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "postcss": "^8.3.9",
+    "postcss-loader": "^6.1.1",
+    "prettier": "^2.4.1",
+    "react-refresh": "^0.10.0",
+    "react-refresh-typescript": "^2.0.2",
+    "style-loader": "^3.3.0",
+    "tailwindcss": "^2.2.16",
+    "ts-loader": "^9.2.6",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.56.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.3.0"
+  }
 }

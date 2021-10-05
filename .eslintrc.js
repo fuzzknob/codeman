@@ -1,0 +1,33 @@
+module.exports = {
+  extends: [
+    'prettier',
+    'plugin:prettier/recommended',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+  ],
+  parserOptions: {
+    project: 'tsconfig.json',
+    ecmaVersion: 2018,
+    sourceType: 'module',
+  },
+  rules: {
+    'react/prop-types': 0,
+    'no-console': 'warn',
+    '@typescript-eslint/array-type': 'off',
+    '@typescript-eslint/ban-ts-ignore': 'off',
+    '@typescript-eslint/camelcase': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/member-delimiter-style': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/no-object-literal-type-assertion': 'off',
+    '@typescript-eslint/no-this-alias': 'off',
+    '@typescript-eslint/no-for-in-array': 'off',
+    '@typescript-eslint/semi': ['error', 'never'],
+    'no-shadow': 'warn',
+    'react/display-name': 'off',
+    semi: ['error', 'never'],
+  },
+}
