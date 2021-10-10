@@ -5,15 +5,15 @@ import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin'
 
 export default {
   mode: 'development',
-  target: ['web', 'electron-renderer'],
-  entry: './src/renderer/index.tsx',
+  target: 'web',
+  entry: './src/index.tsx',
   output: {
     filename: 'renderer.dev.js',
-    path: path.resolve(__dirname, './dist/renderer'),
+    path: path.resolve(__dirname, './build'),
   },
   plugins: [
     new HTMLPlugin({
-      template: './src/renderer/index.html',
+      template: './src/index.html',
       minify: {
         collapseWhitespace: true,
         removeAttributeQuotes: true,

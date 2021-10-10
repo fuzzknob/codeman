@@ -20,5 +20,5 @@
     "resolveJsonModule": true,
     "allowJs": true,
   },
-  "exclude": ["test", "dist", "./*.config.js"]
+  "exclude": ["test", "dist", "./*.config.js", "./src-tauri"]
 }

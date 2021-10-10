@@ -6,18 +6,18 @@
   "description": "Codeman (Visual Studio Code Project Manger)",
   "license": "MIT",
   "scripts": {
-    "start": "concurrently \"yarn:start:renderer\" \"yarn:start:electron\" --kill-others",
+    "start": "yarn tauri dev",
     "start:renderer": "cross-env TS_NODE_TRANSPILE_ONLY=true webpack serve",
-    "start:electron": "cross-env NODE_ENV=development electron -r ts-node/register/transpile-only ./src/main/main.ts",
     "lint": "cross-env NODE_ENV=development eslint . --fix --cache --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
-    "electron": "^15.1.0",
+    "@tauri-apps/api": "^1.0.0-beta.8",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.1",
+    "@tauri-apps/cli": "^1.0.0-beta.10",
     "@types/node": "^16.10.2",
     "@types/react": "^17.0.27",
     "@types/react-dom": "^17.0.9",
@@ -26,7 +26,6 @@
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
     "autoprefixer": "^10.3.7",
-    "concurrently": "^6.3.0",
     "cross-env": "^7.0.3",
     "css-loader": "^6.3.0",
     "eslint": "^7.32.0",
