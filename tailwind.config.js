@@ -1,11 +1,43 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   purge: [],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'media',
   theme: {
-    extend: {},
+    colors: {
+      primary: {
+        DEFAULT: '#FFFFFF',
+        dark: '#303030',
+      },
+      secondary: {
+        DEFAULT: '#AAAAAA',
+        dark: '#3f3f3f',
+      },
+      tertiary: {
+        DEFAULT: '#EAEAEA',
+        dark: '#4C5052',
+      },
+      blue: {
+        DEFAULT: '#2661D8',
+        highlight: '#376BD3',
+      },
+      color: {
+        dark: '#333232',
+        'white': '#FFFFFF',
+        'gray': '#AAAAAA',
+        'dark-gray': '#8B8B8B'
+      },
+    },
+    extend: {
+      fontFamily: {
+        sans: ['Roboto', ...defaultTheme.fontFamily.sans],
+      },
+    },
   },
   variants: {
-    extend: {},
+    extend: {
+      opacity: ['disabled'],
+    },
   },
   plugins: [],
 }
