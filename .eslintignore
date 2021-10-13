@@ -1,2 +1,4 @@
 .eslintrc.js
 dist
+*.config.js
+src-tauri
