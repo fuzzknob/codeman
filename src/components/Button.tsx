@@ -11,7 +11,8 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 const schemeStyles = {
   primary:
     'bg-primary hover:bg-secondary dark:bg-primary-dark dark:hover:bg-secondary-dark text-color-dark dark:text-color-white',
-  secondary: 'bg-secondary dark:bg-secondary-dark text-color-white',
+  secondary:
+    'bg-secondary dark:bg-secondary-dark text-color-gray hover:bg-tertiary dark:hover:bg-tertiary-dark',
   tertiary:
     'bg-tertiary dark:bg-tertiary-dark text-color-dark dark:text-color-white',
   blue: 'bg-blue hover:bg-blue-highlight text-color-white',
