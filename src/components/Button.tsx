@@ -39,7 +39,7 @@ const Button: React.FC<ButtonProps> = ({
     >
       {loading ? (
         <div className="position-center">
-          <VscLoading className="animate-spin" />
+          <VscLoading role="loader" className="animate-spin" />
         </div>
       ) : null}
       <span className={`${loading ? 'invisible' : ''}`}>{children}</span>
