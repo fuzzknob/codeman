@@ -9,7 +9,10 @@ interface ModalProps {
 
 const Modal: React.FC<ModalProps> = ({ children, action }) => {
   return (
-    <div className="fixed inset-0 z-50 bg-secondary-dark bg-opacity-25 backdrop-filter backdrop-blur-sm flex-center">
+    <div
+      role="dialog"
+      className="fixed inset-0 z-50 bg-secondary-dark bg-opacity-25 backdrop-filter backdrop-blur-sm flex-center"
+    >
       <div
         className="bg-primary dark:bg-primary-dark rounded-md"
         style={{ width: '470px' }}
