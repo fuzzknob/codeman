@@ -6,6 +6,10 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
   ],
+  plugins: [
+    'testing-library',
+    'jest-dom',
+  ],
   parserOptions: {
     project: 'tsconfig.json',
     ecmaVersion: 2018,
@@ -28,6 +32,11 @@ module.exports = {
     '@typescript-eslint/semi': ['error', 'never'],
     'no-shadow': 'warn',
     'react/display-name': 'off',
+    "testing-library/await-async-query": "error",
+    "testing-library/no-await-sync-query": "error",
+    "testing-library/no-debug": "warn",
+    "testing-library/no-dom-import": "off",
+    "testing-library/no-manual-cleanup": "warn",
     semi: ['error', 'never'],
   },
 }
