@@ -49,13 +49,18 @@
       "active": false
     },
     "allowlist": {
-      "all": false
+      "all": false,
+      "shell": {
+        "open": true
+      }
     },
     "windows": [
       {
         "title": "Codeman",
         "minWidth": 700,
         "minHeight": 500,
+        "width": 700,
+        "height": 500,
         "resizable": true,
         "fullscreen": false,
         "center": true,
