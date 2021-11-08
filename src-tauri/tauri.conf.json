@@ -54,10 +54,13 @@
     "windows": [
       {
         "title": "Codeman",
-        "width": 800,
-        "height": 600,
+        "minWidth": 700,
+        "minHeight": 500,
         "resizable": true,
-        "fullscreen": false
+        "fullscreen": false,
+        "center": true,
+        "transparent": true,
+        "decorations": false
       }
     ],
     "security": {

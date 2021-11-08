@@ -1,17 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
+import TitleBar from './components/TitleBar'
 
 const App = () => {
-  const [msg, setMsg] = useState('hello')
-
   return (
-    <div>
-      <h1 className="text-2xl text-red-500">{msg}</h1>
-      <input
-        type="text"
-        onChange={(e) => {
-          setMsg(e.target.value)
-        }}
-      />
+    <div className="bg-primary rounded-lg h-full select-none cursor-default dark:bg-primary-dark">
+      <TitleBar />
+      <h1>Hello</h1>
     </div>
   )
 }
