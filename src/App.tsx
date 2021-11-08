@@ -1,11 +1,14 @@
 import React from 'react'
+import Routes from './Routes'
 import TitleBar from './components/TitleBar'
 
 const App = () => {
   return (
-    <div className="bg-primary rounded-lg h-full select-none cursor-default dark:bg-primary-dark">
+    <div className="bg-primary dark:bg-primary-dark text-color-dark dark:text-color-white rounded-lg h-screen select-none cursor-default text-base flex flex-col">
       <TitleBar />
-      <h1>Hello</h1>
+      <main className="overflow-auto flex-1 flex flex-col">
+        <Routes />
+      </main>
     </div>
   )
 }
