@@ -1,9 +1,8 @@
 import React, { ButtonHTMLAttributes } from 'react'
 import { VscLoading } from 'react-icons/vsc'
-import { Scheme } from '../utils/style'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  scheme?: Scheme
+  scheme?: 'primary' | 'secondary' | 'tertiary' | 'blue'
   shape?: 'normal' | 'square'
   loading?: boolean
 }
