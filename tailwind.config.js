@@ -28,6 +28,15 @@ module.exports = {
         'dark-gray': '#8B8B8B'
       },
     },
+    fontSize: {
+      ...defaultTheme.fontSize,
+      mega: '105px',
+      '2xl': '35px',
+      xl: '25px',
+      lg: '15px',
+      base: '13px',
+      sm: '11px',
+    },
     extend: {
       fontFamily: {
         sans: ['Roboto', ...defaultTheme.fontFamily.sans],

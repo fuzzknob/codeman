@@ -26,7 +26,7 @@ const Button: React.FC<ButtonProps> = ({
   disabled,
   ...props
 }) => {
-  const padding = shape === 'square' ? 'p-2' : 'px-5 py-1'
+  const padding = shape === 'square' ? 'p-2' : 'px-3 py-1'
   const colors = schemeStyles[scheme || 'primary']
   return (
     <button
