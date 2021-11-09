@@ -16,7 +16,7 @@ const TitleBar: React.FC = () => {
         onClick={handleClose}
       >
         <IoCloseOutline
-          className="text-color-dark dark:text-color-gray dark:hover:text-color-white"
+          className="text-color-dark-gray hover:text-color-dark dark:text-color-gray dark:hover:text-color-white"
           size={20}
         />
       </button>
