@@ -52,6 +52,10 @@
       "all": false,
       "shell": {
         "open": true
+      },
+      "window": {
+        "close": true,
+        "startDragging": true
       }
     },
     "windows": [
@@ -68,6 +72,7 @@
         "decorations": false
       }
     ],
+    "macOSPrivateApi": true,
     "security": {
       "csp": "default-src blob: data: filesystem: ws: wss: http: https: tauri: 'unsafe-eval' 'unsafe-inline' 'self' img-src: 'self'"
     }
