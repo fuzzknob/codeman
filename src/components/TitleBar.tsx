@@ -1,26 +1,25 @@
-import React from 'react'
+import { Flex, ActionIcon } from '@mantine/core'
 import { IoCloseOutline } from 'react-icons/io5'
-import { closeCurrentWindow } from '../services/app.service'
+import { closeCurrentWindow } from '@/services/app-service'
 
-const TitleBar: React.FC = () => {
+const TitleBar = () => {
   async function handleClose() {
     await closeCurrentWindow()
   }
 
   return (
-    <section data-tauri-drag-region className="flex p-3">
-      <button
-        role="close"
-        tabIndex={-1}
-        className="cursor-default"
+    <Flex data-tauri-drag-region p={12}>
+      <ActionIcon
+        variant="transparent"
         onClick={handleClose}
+        aria-label="close"
       >
         <IoCloseOutline
           className="text-color-dark-gray hover:text-color-dark dark:text-color-gray dark:hover:text-color-white"
           size={20}
         />
-      </button>
-    </section>
+      </ActionIcon>
+    </Flex>
   )
 }
 

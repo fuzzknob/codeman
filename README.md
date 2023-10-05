@@ -1,5 +1,7 @@
-# Codeman
-The missing project manager for Visual Studio Code.
+# Tauri + React + Typescript
 
-# 🚧 Caution 🚧
-Currently, this project is in a heavy development process. So, things might break. If you're looking for a fairly stable version of this project, Checkout the "[v1 version](https://github.com/fuzzknob/codeman/tree/v1.0)".
+This template should help get you started developing with Tauri, React and Typescript in Vite.
+
+## Recommended IDE Setup
+
+- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)

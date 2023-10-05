@@ -1,0 +1,11 @@
+.project {
+  background-color: var(--mantine-color-gray-0);
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.project:hover {
+  background-color: var(--mantine-color-gray-1);
+}

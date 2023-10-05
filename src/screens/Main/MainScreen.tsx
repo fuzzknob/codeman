@@ -1,45 +1,51 @@
-import React from 'react'
-import Button from '../../components/Button'
-import { IoSearchOutline, IoGitBranch, IoFolderOutline } from 'react-icons/io5'
+import { useState } from 'react'
+import { ActionIcon, Group, Box, Space, Flex } from '@mantine/core'
+import {
+  IoFolderOutline,
+  IoGitBranchOutline,
+  IoSettingsOutline,
+} from 'react-icons/io5'
+import { useNavigate } from 'react-router-dom'
+import SearchInput from '@/components/SearchInput'
 
-const Project: React.FC<{ name: string; path: string }> = ({ name, path }) => {
-  return (
-    <div className="px-4 py-2 hover:bg-secondary dark:hover:bg-secondary-dark rounded-lg cursor-pointer">
-      <h1 className="text-lg">{name}</h1>
-      <p className="text-sm text-color-gray dark:text-color-dark-gray">
-        {path}
-      </p>
-    </div>
-  )
-}
+import Project from './components/Project'
 
-const MainScreen: React.FC = () => {
+const MainScreen = () => {
+  const navigate = useNavigate()
+  const [search, setSearch] = useState('')
   return (
-    <section className="flex flex-col px-8 pb-8 h-full">
-      <div className="flex justify-between">
-        <Button shape="square">
-          <IoSearchOutline size={18} />
-        </Button>
-        <div>
-          <Button shape="square" className="mr-2">
-            <IoGitBranch size={18} />
-          </Button>
-          <Button shape="square">
+    <Flex
+      direction="column"
+      px="xl"
+      py="xs"
+      h="100%"
+      style={{ overflow: 'auto' }}
+    >
+      <Group justify="space-between">
+        <SearchInput
+          value={search}
+          onChange={setSearch}
+          placeholder="Search Projects"
+        />
+        <Group>
+          <ActionIcon variant="subtle" onClick={() => navigate('/setup/cli')}>
+            <IoSettingsOutline size={18} />
+          </ActionIcon>
+          <ActionIcon variant="subtle">
+            <IoGitBranchOutline size={18} />
+          </ActionIcon>
+          <ActionIcon variant="subtle">
             <IoFolderOutline size={18} />
-          </Button>
-        </div>
-      </div>
-      <div className="mt-5 overflow-auto">
-        <Project name="Codeman" path="~/Projects/codeman" />
-        <Project name="Codeman" path="~/Projects/codeman" />
-        <Project name="Codeman" path="~/Projects/codeman" />
-        <Project name="Codeman" path="~/Projects/codeman" />
-        <Project name="Codeman" path="~/Projects/codeman" />
-        <Project name="Codeman" path="~/Projects/codeman" />
-        <Project name="Codeman" path="~/Projects/codeman" />
-        <Project name="Codeman" path="~/Projects/codeman" />
-      </div>
-    </section>
+          </ActionIcon>
+        </Group>
+      </Group>
+      <Space h={20} />
+      <Box style={{ overflow: 'auto' }} h="100%">
+        <Project />
+        <Project />
+        <Project />
+      </Box>
+    </Flex>
   )
 }
 

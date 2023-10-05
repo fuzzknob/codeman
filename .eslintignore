@@ -1,4 +1,5 @@
-.eslintrc.js
+.eslintrc.cjs
 dist
 *.config.js
+*.config.ts
 src-tauri

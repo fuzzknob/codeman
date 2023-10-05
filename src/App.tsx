@@ -1,15 +1,17 @@
-import React from 'react'
+import { MantineProvider } from '@mantine/core'
 import Routes from './Routes'
-import TitleBar from './components/TitleBar'
+import MainLayout from './layouts/MainLayout'
+
+import '@mantine/core/styles.css'
+import './global.css'
 
 const App = () => {
   return (
-    <div className="bg-primary dark:bg-primary-dark text-color-dark dark:text-color-white rounded-lg h-screen select-none cursor-default text-base flex flex-col">
-      <TitleBar />
-      <main className="h-full overflow-auto">
+    <MantineProvider>
+      <MainLayout>
         <Routes />
-      </main>
-    </div>
+      </MainLayout>
+    </MantineProvider>
   )
 }
 
